@@ -9,7 +9,7 @@ public class ClasePrueba extends Exception {
     public ClasePrueba(Throwable throwable) {
         super(throwable);
     }
-
+// MARIQUENA :)
     public ClasePrueba(String string1, Throwable throwable) {
         super(string1, throwable);
     }
