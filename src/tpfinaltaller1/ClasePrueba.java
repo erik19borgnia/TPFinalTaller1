@@ -10,15 +10,12 @@ public class ClasePrueba extends Exception {
         super(throwable);
     }
 
-    public ClasePrueba(String string, Throwable throwable) {
-        super(string, throwable);
+    public ClasePrueba(String string1, Throwable throwable) {
+        super(string1, throwable);
     }
 
     public ClasePrueba(String string) {
         super(string);
     }
 
-    public ClasePrueba() {
-        super();
-    }
 }
