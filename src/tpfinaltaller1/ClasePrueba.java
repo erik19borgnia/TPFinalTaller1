@@ -22,3 +22,5 @@ public class ClasePrueba extends Exception {
         super();
     }
 }
+
+//Hola
