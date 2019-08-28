@@ -10,8 +10,8 @@ public class ClasePrueba extends Exception {
         super(throwable);
     }
 // MARIQUENA :)
-    public ClasePrueba(String string, Throwable throwable) {
-        super(string, throwable);
+    public ClasePrueba(String string1, Throwable throwable) {
+        super(string1, throwable);
     }
 
     public ClasePrueba(String string) {
