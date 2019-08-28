@@ -17,7 +17,7 @@ public class ClasePrueba extends Exception {
     public ClasePrueba(String string) {
         super(string);
     }
-
+//comentario prueba
     public ClasePrueba() {
         super();
     }
