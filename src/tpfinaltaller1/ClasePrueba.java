@@ -1,5 +1,6 @@
 package tpfinaltaller1;
 
+@SuppressWarnings("oracle.jdeveloper.java.serialversionuid-field-missing")
 public class ClasePrueba extends Exception {
     public ClasePrueba(String string, Throwable throwable, boolean b, boolean b1) {
         super(string, throwable, b, b1);
