@@ -3,10 +3,9 @@ package tpfinaltaller1.modelo;
 import java.util.ArrayList;
 
 public class Almacen {
-    public Almacen() {
-        super();
-        //Hola dame bola soy yo pablo
-        System.out.println("aasdasdasd");
+    public Almacen(String nombre) {
+       this.nombre=nombre;
+       this.analisis= new ArrayList<Analisis>();
     }
     
     private ArrayList<Analisis> analisis;

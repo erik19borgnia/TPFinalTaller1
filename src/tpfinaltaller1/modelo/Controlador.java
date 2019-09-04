@@ -8,7 +8,9 @@ public class Controlador {
     private Almacen almacenActual;
     
     private void crear(String nombreAlmacen){
-        
+    	if(this.almacenActual==null) {
+    		this.almacenActual= new Almacen(nombreAlmacen);
+    	}
     }
     
     private void cargar(String nombreAlmacen){
@@ -16,7 +18,11 @@ public class Controlador {
     }
     
     private void guardar(){
-        
+        if(this.almacenActual!=null) {
+        	
+        }else {
+        	//excepcion
+        }
     }
     
     private void importar(String nombreArchivo){
