@@ -5,13 +5,13 @@ import java.util.ArrayList;
 public class Almacen
 {
     private ArrayList<Analisis> analisis;
-    private String nombre;
-    
-        
-    public Almacen()
+  
+    public Almacen(String nombre)
     {
-        super();
+       this.nombre=nombre;
+       this.analisis= new ArrayList<Analisis>();
     }
+    private String nombre;
     
     public void importar(String nombreArchivo)
     {
