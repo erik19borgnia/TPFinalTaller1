@@ -2,13 +2,14 @@ package tpfinaltaller1.modelo;
 
 import java.util.ArrayList;
 
-public class Almacen {
+public class Almacen {    
+    private ArrayList<Analisis> analisis;
+    private String nombre;
+    
+    
     public Almacen() {
         super();
     }
-    
-    private ArrayList<Analisis> analisis;
-    private String nombre;
     
     public void importar(String nombreArchivo){
         

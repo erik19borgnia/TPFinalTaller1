@@ -1,11 +1,12 @@
 package tpfinaltaller1.modelo;
 
 public class Controlador {
+    
+    private Almacen almacenActual;
+
     public Controlador() {
         super();
     }
-    
-    private Almacen almacenActual;
     
     private void crear(String nombreAlmacen){
         

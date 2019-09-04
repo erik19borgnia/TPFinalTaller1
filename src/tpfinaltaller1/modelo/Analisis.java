@@ -4,9 +4,6 @@ import java.util.GregorianCalendar;
 import java.util.HashMap;
 
 public class Analisis {
-    public Analisis() {
-        super();
-    }
     private static final int id = 0;
     private int idActual;
     private GregorianCalendar fecha;
@@ -15,6 +12,10 @@ public class Analisis {
     private String medico;
     private String domicilio;
     private HashMap<String,Double> estudios;
+
+    public Analisis() {
+        super();
+    }
     
     public Double valorEstudio(String nombreEstudio){
        return 0.0;
