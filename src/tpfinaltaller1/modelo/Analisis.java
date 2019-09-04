@@ -16,12 +16,12 @@ public class Analisis
 
     public Analisis()
     {
-        super();
+        this.idActual=id++;
     }
 
     public Double valorEstudio(String nombreEstudio)
     {
-        return 0.0;
-    } //aca hay un comentario
+        return this.estudios.get(nombreEstudio);
+    } 
 
 }
