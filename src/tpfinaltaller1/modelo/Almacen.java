@@ -5,6 +5,8 @@ import java.util.ArrayList;
 public class Almacen {
     public Almacen() {
         super();
+        //Hola dame bola soy yo pablo
+        System.out.println("aasdasdasd");
     }
     
     private ArrayList<Analisis> analisis;
