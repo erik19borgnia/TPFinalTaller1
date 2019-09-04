@@ -1,14 +1,15 @@
-
 package tpfinaltaller1.vista;
 
 /**
  *
  * @author Fede
  */
-public class Ventana extends javax.swing.JFrame {
+public class Ventana extends javax.swing.JFrame
+{
 
     /** Creates new form Ventana */
-    public Ventana() {
+    public Ventana()
+    {
         initComponents();
     }
 
@@ -49,7 +50,7 @@ public class Ventana extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(53, 53, 53))
         );
@@ -88,7 +89,7 @@ public class Ventana extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
@@ -105,7 +106,7 @@ public class Ventana extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
@@ -116,70 +117,46 @@ public class Ventana extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String args[])
+    {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing
-                                                                   .UIManager
-                                                                   .getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing
-                         .UIManager
-                         .setLookAndFeel(info.getClassName());
+        try
+        {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels())
+            {
+                if ("Nimbus".equals(info.getName()))
+                {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util
-                .logging
-                .Logger
-                .getLogger(Ventana.class.getName())
-                .log(java.util
-                         .logging
-                         .Level
-                         .SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util
-                .logging
-                .Logger
-                .getLogger(Ventana.class.getName())
-                .log(java.util
-                         .logging
-                         .Level
-                         .SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util
-                .logging
-                .Logger
-                .getLogger(Ventana.class.getName())
-                .log(java.util
-                         .logging
-                         .Level
-                         .SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util
-                .logging
-                .Logger
-                .getLogger(Ventana.class.getName())
-                .log(java.util
-                         .logging
-                         .Level
-                         .SEVERE, null, ex);
+        } catch (ClassNotFoundException ex)
+        {
+            java.util.logging.Logger.getLogger(Ventana.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex)
+        {
+            java.util.logging.Logger.getLogger(Ventana.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex)
+        {
+            java.util.logging.Logger.getLogger(Ventana.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex)
+        {
+            java.util.logging.Logger.getLogger(Ventana.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt
-            .EventQueue
-            .invokeLater(new Runnable() {
-                public void run() {
-                    new Ventana().setVisible(true);
-                }
-            });
+        java.awt.EventQueue.invokeLater(new Runnable()
+        {
+            public void run()
+            {
+                new Ventana().setVisible(true);
+            }
+        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
