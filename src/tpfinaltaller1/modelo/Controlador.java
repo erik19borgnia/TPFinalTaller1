@@ -1,22 +1,37 @@
 package tpfinaltaller1.modelo;
 
-public class Controlador {
-    public Controlador() {
+public class Controlador
+{
+
+    private Almacen almacenActual;
+
+    public Controlador()
+    {
         super();
     }
     
-    private Almacen almacenActual;
-    
     private void crear(String nombreAlmacen){
+    	if(this.almacenActual==null)
+      {
+    		this.almacenActual= new Almacen(nombreAlmacen);
+    	}
+    }
+    
+    private void cargar(String nombreAlmacen)
+    {
         
     }
     
-    private void cargar(String nombreAlmacen){
-        
-    }
-    
-    private void guardar(){
-        
+    private void guardar()
+    {
+        if(this.almacenActual!=null)
+        {
+        	
+        }
+      else
+        {
+        	//excepcion
+        }
     }
     
     private void importar(String nombreArchivo){
@@ -33,6 +48,5 @@ public class Controlador {
     }
     
     public void analizarComando(){
-        
     }
 }
