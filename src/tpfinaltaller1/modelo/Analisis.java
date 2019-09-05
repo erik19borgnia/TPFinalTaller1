@@ -3,19 +3,16 @@ package tpfinaltaller1.modelo;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
 
-public class Analisis {
-    
-    private static int id = 0;
-    private int idActual;
-    private GregorianCalendar fecha;
-    private String apellido;
-    private String nombre;
-    private String medico;
-    private String domicilio;
-    private HashMap<String,Double> estudios;
+private static int id = 0;
+private int idActual;
+private GregorianCalendar fecha;
+private String apellido;
+private String nombre;
+private String medico;
+private String domicilio;
+private HashMap<String,Double> estudios;
 
-
-    public Analisis(GregorianCalendar fecha, String apellido, String nombre, String medico, String domicilio,
+public Analisis(GregorianCalendar fecha, String apellido, String nombre, String medico, String domicilio,
                     HashMap<String, Double> estudios) {
         this.idActual = id;
         this.fecha = fecha;
@@ -57,5 +54,5 @@ public class Analisis {
 
     public Double valorEstudio(String nombreEstudio){
        return estudios.get(nombreEstudio);
-    }    
+    }
 }
