@@ -1,12 +1,17 @@
 package tpfinaltaller1.vista;
 
+import controlador.Controlador;
+
+import java.util.ArrayList;
+
+import tpfinaltaller1.modelo.Analisis;
+
 /**
  *
  * @author Fede
  */
-public class Ventana extends javax.swing.JFrame
+public class Ventana extends javax.swing.JFrame implements InterfazVista
 {
-
     /** Creates new form Ventana */
     public Ventana()
     {
@@ -27,9 +32,9 @@ public class Ventana extends javax.swing.JFrame
         jButton1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        textoResultados = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        textoErrores = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
@@ -42,6 +47,11 @@ public class Ventana extends javax.swing.JFrame
         jTextField1.setText("consultas");
 
         jButton1.setText("ejecutar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -50,7 +60,7 @@ public class Ventana extends javax.swing.JFrame
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(53, 53, 53))
         );
@@ -68,13 +78,13 @@ public class Ventana extends javax.swing.JFrame
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.PAGE_START);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        textoResultados.setColumns(20);
+        textoResultados.setRows(5);
+        jScrollPane1.setViewportView(textoResultados);
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane2.setViewportView(jTextArea2);
+        textoErrores.setColumns(20);
+        textoErrores.setRows(5);
+        jScrollPane2.setViewportView(textoErrores);
 
         jLabel1.setText("resultados");
 
@@ -89,7 +99,7 @@ public class Ventana extends javax.swing.JFrame
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
@@ -106,13 +116,17 @@ public class Ventana extends javax.swing.JFrame
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
         pack();
     }//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -168,9 +182,32 @@ public class Ventana extends javax.swing.JFrame
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextArea textoErrores;
+    private javax.swing.JTextArea textoResultados;
     // End of variables declaration//GEN-END:variables
 
+    @Override
+    public void setControlador(Controlador c) {
+        jButton1.addActionListener(c);
+    }
+
+    @Override
+    public String getComando() {
+        return jTextField1.getText();
+    }
+
+    @Override
+    public void mostrarResultados(ArrayList<Analisis> resultado) {
+        for(Analisis a: resultado){
+            textoErrores.setText(a.toString());
+        }
+        textoErrores.repaint();
+    }
+
+    @Override
+    public void mostrarError(String mensaje) {
+        textoErrores.setText(mensaje);
+        textoErrores.repaint();
+    }
 }

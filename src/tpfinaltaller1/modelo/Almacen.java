@@ -1,8 +1,10 @@
 package tpfinaltaller1.modelo;
 
+import java.io.Serializable;
+
 import java.util.ArrayList;
 
-public class Almacen
+public class Almacen implements Serializable
 {
     private ArrayList<Analisis> analisis;
   
@@ -23,8 +25,15 @@ public class Almacen
 
     }
 
-    public ArrayList<Analisis> consultar(String comando)
+    public ArrayList<Analisis> consultar(String[] comando)
     {
+        return null;
+    }
+
+    public void agregarAnalisis(Analisis nuevo) {
+    }
+
+    public String getNombre() {
         return null;
     }
 }
